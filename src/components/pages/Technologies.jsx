@@ -15,18 +15,18 @@ import AngularIcon from "../../img/angular-icon.png"
 
 function Technologies() {
   const technologies = [
-    { name: "JavaScript", icon: JavascriptIcon, level: 80 },
-    { name: "TypeScript", icon: TypescriptIcon, level: 70 },
-    { name: "React", icon: ReactIcon, level: 80 },
-    { name: "Next.js", icon: NextjsIcon, level: 60 },
-    { name: "Vue.js", icon: VuejsIcon, level: 50 },
-    { name: "TailwindCSS", icon: TailwindcssIcon, level: 75 },
-    { name: "Figma", icon: FigmaIcon, level: 65 },
-    { name: "GIT", icon: GitIcon, level: 90 },
-    { name: ".NET", icon: DotNetIcon, level: 70 },
-    { name: "SQL Server", icon: SqlServerIcon, level: 65 },
-    { name: "SQL Lite", icon: SqlLiteIcon, level: 70 },
-    { name: "Angular", icon: AngularIcon, level: 80 },
+    { name: "JavaScript", icon: JavascriptIcon },
+    { name: "TypeScript", icon: TypescriptIcon },
+    { name: "React", icon: ReactIcon },
+    { name: "Next.js", icon: NextjsIcon },
+    { name: "Vue.js", icon: VuejsIcon },
+    { name: "TailwindCSS", icon: TailwindcssIcon },
+    { name: "Figma", icon: FigmaIcon },
+    { name: "GIT", icon: GitIcon },
+    { name: ".NET", icon: DotNetIcon},
+    { name: "SQL Server", icon: SqlServerIcon },
+    { name: "SQL Lite", icon: SqlLiteIcon },
+    { name: "Angular", icon: AngularIcon},
   ];
   
   return (
@@ -39,12 +39,6 @@ function Technologies() {
               <img src={technology.icon} alt={technology.name} className="w-16 h-16 mx-auto" />
               <p className="mt-4 text-center font-semibold text-[#6420AA]">{technology.name}</p>
               <div className="w-full bg-[#FF7ED4] rounded-full mt-2">
-                <div
-                  className="bg-[#FF3EA5] text-xs font-medium text-center text-white rounded-full"
-                  style={{ width: `${technology.level}%` }}
-                >
-                  {technology.level}%
-                </div>
               </div>
             </div>
           ))}
