@@ -126,7 +126,7 @@ function AboutMePage() {
               <p>📍 Udemy, Online</p>
             </div>
             <h3 className="font-semibold">05/2024-07/2024</h3>
-            <button onClick={() => toggleSection('education6')} className="text-purple-700">
+             <button onClick={() => toggleSection('education6')} className="text-purple-700">
               {expandedSections['education6'] ? <FaMinus /> : <FaPlus />}
             </button>
           </div>
@@ -237,7 +237,7 @@ function AboutMePage() {
   };
 
   return (
-    <div id="about" className="bg-gradient-to-r from-purple-500 to-pink-500 min-h-screen flex flex-col items-center py-20">
+    <div id="about" className="bg-gradient-to-r from-purple-500 to-pink-500 min-h-screen flex flex-col items-center p-20">
       <div className="container mx-auto flex flex-col items-center">
         <div className="text-center mb-12">
           <img
@@ -257,7 +257,7 @@ function AboutMePage() {
                 <div
                   key={section}
                   className={`cursor-pointer rounded-full bg-white text-purple-600 h-24 w-24 text-lg font-semibold text-center flex items-center justify-center transition-colors ${
-                    activeSection === section ? 'bg-purple-300 text-white  ' : ''
+                    activeSection === section ? 'bg-purple-400 text-white' : ''
                   }`}
                   onClick={() => setActiveSection(section)}
                 >

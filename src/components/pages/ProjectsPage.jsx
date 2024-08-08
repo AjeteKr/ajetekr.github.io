@@ -71,7 +71,7 @@ const ProjectsPage = () => {
         scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
     };
     return (
-        <div id="projects" className="bg-gradient-to-r from-purple-900 to-black text-white py-20">
+        <div id="projects" className="bg-gradient-to-r from-purple-900 to-black text-white py-20 px-20">
             <div className="container mx-auto px-4 py-6">
                 <h1 className="text-5xl font-bold mt-4 mb-12 text-center text-purple">My Projects</h1>
                 <div className="flex items-center">

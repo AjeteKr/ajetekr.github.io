@@ -5,7 +5,7 @@ import './HomePage.css';
 
 const HomePage = () => {
     return (
-        <section id='home' className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-20">
+        <section id='home' className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-20 px-20">
             <div className="container mx-auto flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 text-center md:text-left">
                     <h2 className="text-5xl font-bold mb-4">Welcome to My Portfolio</h2>
