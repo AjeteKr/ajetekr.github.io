@@ -130,7 +130,7 @@ function AboutMePage() {
               {expandedSections['education6'] ? <FaMinus /> : <FaPlus />}
             </button>
           </div>
-          {expandedSections['education5'] && (
+          {expandedSections['education6'] && (
             <ul className="list-none pl-5 space-y-2">
               <li>React Fundamentals: Mastery of the core concepts of React, including components, JSX, state, and props.</li>
               <li>Component Lifecycle: Understanding the lifecycle methods of React components and how to manage component state and side effects using hooks like 'useState' and 'useEffect'.</li>
@@ -257,7 +257,7 @@ function AboutMePage() {
                 <div
                   key={section}
                   className={`cursor-pointer rounded-full bg-white text-purple-600 h-24 w-24 text-lg font-semibold text-center flex items-center justify-center transition-colors ${
-                    activeSection === section ? 'bg-purple-700 text-white' : ''
+                    activeSection === section ? 'bg-purple-300 text-white  ' : ''
                   }`}
                   onClick={() => setActiveSection(section)}
                 >
