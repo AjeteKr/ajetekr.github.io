@@ -81,3 +81,11 @@ section:hover {
   flex-shrink: 0;
   width: 33.33%; /* width set to display 3 cards at a time */
 }
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
