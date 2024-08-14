@@ -30,7 +30,7 @@ function Technologies() {
   ];
   
   return (
-    <div id="technologies" className="flex justify-center items-center min-h-screen bg-gradient-to-r from-[#6420AA] to-[#FF3EA5]">
+    <div id="technologies" className="flex justify-center items-center min-h-screen bg-gradient-to-r from-purple-500 to-pink-500">
       <div className="bg-white p-8 rounded-lg shadow-lg w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2">
         <h2 className="text-2xl font-bold text-center mb-6 text-[#6420AA]">My Skills</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
