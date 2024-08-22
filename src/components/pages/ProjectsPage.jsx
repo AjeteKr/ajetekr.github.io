@@ -17,12 +17,12 @@ const Project = ({ title, description, date, image, githubLink, projectLink }) =
                 <p className="text-gray-300 mb-2 text-sm">{description}</p>
                 <p className="text-gray-400 mb-2 text-xs">{date}</p>
                 <div className="flex space-x-2">
-                    <a href={githubLink} className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors">
+                    <Link to={githubLink} className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors">
                         <FaGithub className="mr-2" /> View Code
-                    </a>
-                    <a href={projectLink} className="inline-flex items-center px-4 py-2 text-sm font-medium text-purple-600 bg-white rounded-full hover:bg-purple-600 hover:text-white transition-colors">
+                    </Link>
+                    <Link to={projectLink} className="inline-flex items-center px-4 py-2 text-sm font-medium text-purple-600 bg-white rounded-full hover:bg-purple-600 hover:text-white transition-colors">
                         <FaExternalLinkAlt className="mr-2" /> View Project
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
