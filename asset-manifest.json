@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.531dff24.css",
-    "main.js": "/static/js/main.e325bd89.js",
-    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "main.css": "/static/css/main.c7dfcba0.css",
+    "main.js": "/static/js/main.dce35b58.js",
+    "static/js/453.b52434ba.chunk.js": "/static/js/453.b52434ba.chunk.js",
     "static/media/blazor-bank.png": "/static/media/blazor-bank.af22a5d9c3b36f5ffdc5.png",
     "static/media/gwenstem1.png": "/static/media/gwenstem1.5c2ce38dd76a60938620.png",
     "static/media/no-projects.png": "/static/media/no-projects.badd5f923acafc5b55e9.png",
@@ -23,12 +23,12 @@
     "static/media/figma-icon.png": "/static/media/figma-icon.cb5ea98e42c0078b4c76.png",
     "static/media/dotnet-icon.png": "/static/media/dotnet-icon.2a92e290242642ebc609.png",
     "index.html": "/index.html",
-    "main.531dff24.css.map": "/static/css/main.531dff24.css.map",
-    "main.e325bd89.js.map": "/static/js/main.e325bd89.js.map",
-    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+    "main.c7dfcba0.css.map": "/static/css/main.c7dfcba0.css.map",
+    "main.dce35b58.js.map": "/static/js/main.dce35b58.js.map",
+    "453.b52434ba.chunk.js.map": "/static/js/453.b52434ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.531dff24.css",
-    "static/js/main.e325bd89.js"
+    "static/css/main.c7dfcba0.css",
+    "static/js/main.dce35b58.js"
   ]
 }
