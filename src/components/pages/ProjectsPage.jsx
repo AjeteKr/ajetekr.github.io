@@ -4,7 +4,9 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import noProjectsImage from "../../img/no-projects.png";
 import LakeXplorerImage from "../../img/lakexplorer.png";
 import GwenStemImage from "../../img/gwenstem1.png";
-import BlazorBankImage from "../../img/blazor-bank.png"; // Add your image path here
+import BlazorBankImage from "../../img/blazor-bank.png"; 
+import { Link } from "react-router-dom";
+
 const Project = ({ title, description, date, image, githubLink, projectLink }) => {
     return (
         <div className="flex-shrink-0 w-80 relative group bg-gradient-to-r from-purple-800 via-pink-700 to-purple-800 rounded-lg overflow-hidden transform transition-transform hover:scale-105 shadow-lg hover:shadow-2xl">
