@@ -73,30 +73,30 @@ section:hover {
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }
 
 .flex-shrink-0 {
   flex-shrink: 0;
-  width: 33.33%; /* width set to display 3 cards at a time */
+  width: 33.33%; 
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 1.5rem; /* Ndrysho madhësinë e fontit për titull */
+        font-size: 1.5rem;
         padding: 0.5rem;
     }
     .swiper-container {
-        width: 100%; /* Sigurohu që swiper të zërë tërë gjerësinë e ekranit */
+        width: 100%;
     }
     .stats-container {
         display: flex;
-        flex-direction: column; /* Bën që statistikat të vendosen njëra mbi tjetrën */
+        flex-direction: column; 
         align-items: center;
     }
     .stat {
-        width: 100%; /* Siguron që secili element të zërë tërë gjerësinë */
+        width: 100%; 
         text-align: center;
         margin: 0.5rem 0;
     }

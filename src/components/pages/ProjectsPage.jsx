@@ -1,4 +1,3 @@
-
 import React, { useRef } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import noProjectsImage from "../../img/no-projects.png";
@@ -9,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Project = ({ title, description, date, image, githubLink, projectLink }) => {
     return (
-        <div className="flex-shrink-0 w-80 relative group bg-gradient-to-r from-purple-800 via-pink-700 to-purple-800 rounded-lg overflow-hidden transform transition-transform hover:scale-105 shadow-lg hover:shadow-2xl">
+        <div className="flex-shrink-0 w-full md:w-80 relative group bg-gradient-to-r from-purple-800 via-pink-700 to-purple-800 rounded-lg overflow-hidden transform transition-transform hover:scale-105 shadow-lg hover:shadow-2xl mx-2 sm:mx-4">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50 group-hover:opacity-70 transition-opacity"></div>
             <div className="relative flex justify-center items-center w-full h-48 overflow-hidden">
                 <img src={image} alt="Project" className="object-cover h-full w-full transition-transform duration-500 group-hover:scale-110" />
@@ -30,6 +29,7 @@ const Project = ({ title, description, date, image, githubLink, projectLink }) =
         </div>
     );
 };
+
 const ProjectsPage = () => {
     const scrollRef = useRef(null);
     const projects = [
@@ -61,32 +61,36 @@ const ProjectsPage = () => {
             title: "Blazor Bank Management System",
             description: "Blazor Bank Management System is a web application built with Blazor for secure and efficient management of bank accounts.",
             date: "2024-06-01",
-            image: BlazorBankImage, // Add your image path here
-            githubLink: "https://github.com/AjeteKr/BlazorBankManagementSystem", // Update with actual GitHub link
-            projectLink: "/projects/bankmanagement", // Update with actual project link
+            image: BlazorBankImage,
+            githubLink: "https://github.com/AjeteKr/BlazorBankManagementSystem",
+            projectLink: "/projects/bankmanagement",
         },
     ];
+
     const scrollLeft = () => {
         scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
     };
+
     const scrollRight = () => {
         scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
     };
+
     return (
-        <div id="projects" className="bg-gradient-to-r from-purple-900 to-black text-white py-20 px-20">
+        <div id="projects" className="bg-gradient-to-r from-purple-900 to-black text-white py-20 px-4 sm:px-6 lg:px-20">
             <div className="container mx-auto px-4 py-6">
-                <h1 className="text-5xl font-bold mt-4 mb-12 text-center text-purple">My Projects</h1>
+                <h1 className="text-4xl sm:text-5xl font-bold mt-4 mb-12 text-center text-purple">My Projects</h1>
                 <div className="flex items-center">
-                    <button onClick={scrollLeft} className="mr-4 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">{"<"}</button>
+                    <button onClick={scrollLeft} className="mr-4 px-2 py-2 sm:px-4 sm:py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">{"<"}</button>
                     <div ref={scrollRef} className="flex overflow-x-auto space-x-4 scrollbar-hide">
                         {projects.map((project, index) => (
                             <Project key={index} {...project} />
                         ))}
                     </div>
-                    <button onClick={scrollRight} className="ml-4 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">{">"}</button>
+                    <button onClick={scrollRight} className="ml-4 px-2 py-2 sm:px-4 sm:py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">{">"}</button>
                 </div>
             </div>
         </div>
     );
 };
+
 export default ProjectsPage;

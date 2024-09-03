@@ -1,8 +1,6 @@
-
 html {
   scroll-behavior: smooth;
 }
-
 
 @keyframes pulse {
     0% {
@@ -15,9 +13,10 @@ html {
       transform: scale(1);
     }
 }
+
 .profile-image {
-    width: 25rem;
-    height: 25rem;
+    width: 10rem; /* Për pajisje mobile */
+    height: 10rem; /* Për pajisje mobile */
     border-radius: 50%;
     object-fit: cover;
     position: relative;
@@ -25,7 +24,14 @@ html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s; 
 }
+
+@media (min-width: 768px) {
+    .profile-image {
+        width: 25rem; /* Për desktop */
+        height: 25rem; /* Për desktop */
+    }
+}
+
 .profile-image:hover {
     transform: scale(1.1); 
 }
-
