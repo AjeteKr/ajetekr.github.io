@@ -1,39 +1,38 @@
-import React from "react";
 
+import React from "react";
 const ToDoListPage = () => {
   return (
-    <div className="container mx-auto px-4 py-6">
-      <h1 className="text-4xl font-bold mt-4 mb-4 text-center text-[#1a202c]">ToDoList Project</h1>
-      <p className="text-xl mt-2 mb-4 text-center text-[#2d3748]">To-Do List App in ReactJS simplifies daily task management.</p>
-      <p className="text-lg mt-2 mb-6 text-center text-[#4a5568]">Date: 2023-11-01</p>
-      <div className="bg-white bg-opacity-50 shadow-md rounded-lg p-6 mb-6">
-        <h2 className="text-2xl font-semibold mb-4 text-[#1a202c]">Project Description</h2>
-        <p className="mb-4 text-[#2d3748]">To-Do List App in ReactJS is a simple and user-friendly application for managing daily tasks. Users can add, delete, and mark their tasks as completed within this application. Each added task is securely stored in the application's storage, allowing users to view their tasks even after refreshing the page.</p>
-        <h3 className="text-xl font-semibold mb-2 text-[#1a202c]">Key Features:</h3>
-        <ul className="custom-list mb-4 text-[#2d3748]">
-          <li>Add Tasks: Easily add new tasks by typing the text and clicking "Add."</li>
-          <li>Delete Tasks: Remove incomplete tasks from the list by clicking "Delete."</li>
-          <li>Complete Tasks: Mark tasks as done to indicate their completion status.</li>
-          <li>Storage Persistence: Task data is stored securely, ensuring continuous access.</li>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-indigo-600 to-pink-500 p-6">
+      <h1 className="text-7xl font-extrabold text-white text-center mb-6">ToDoList Project</h1>
+      <p className="text-lg text-white text-center mb-4">Your stylish To-Do List App for effortless task management.</p>
+      <p className="text-md text-white text-center mb-8">Date: 2023-11-01</p>
+      <div className="bg-white shadow-2xl rounded-lg p-8 w-full max-w-3xl">
+        <h2 className="text-4xl font-semibold text-gray-800 mb-4">Project Description</h2>
+        <p className="text-gray-600 mb-6">This elegant application allows you to manage your daily tasks with ease. Add, delete, and mark tasks as completed, with all data securely stored for your convenience.</p>
+        <h3 className="text-2xl font-semibold text-gray-800 mb-2">Key Features:</h3>
+        <ul className="list-disc list-inside mb-4 text-gray-600">
+          <li className="mb-2">✨ Add Tasks: Quickly add new tasks with a click.</li>
+          <li className="mb-2">🗑️ Delete Tasks: Easily remove tasks from your list.</li>
+          <li className="mb-2">✅ Complete Tasks: Mark tasks as done with a simple click.</li>
+          <li>🔒 Storage Persistence: Your tasks are saved securely.</li>
         </ul>
-        <h3 className="text-xl font-semibold mb-2 text-[#1a202c]">How to Use:</h3>
-        <ul className="custom-list mb-4 text-[#2d3748]">
-          <li>Open the application to view existing tasks.</li>
-          <li>Add new tasks by typing and clicking "Add."</li>
-          <li>Delete tasks by clicking "Delete" for each one.</li>
-          <li>Mark tasks as completed by clicking on them.</li>
+        <h3 className="text-2xl font-semibold text-gray-800 mb-2">How to Use:</h3>
+        <ul className="list-disc list-inside mb-4 text-gray-600">
+          <li className="mb-2">👀 Open the app to see your tasks.</li>
+          <li className="mb-2">➕ Add new tasks and click "Add."</li>
+          <li className="mb-2">🗑️ Delete tasks by clicking "Delete."</li>
+          <li>✅ Mark tasks as completed by clicking on them.</li>
         </ul>
-        <h3 className="text-xl font-semibold mb-2 text-[#1a202c]">Technologies Used:</h3>
-        <ul className="custom-list text-[#2d3748]">
-          <li>ReactJS: Core framework for application development.</li>
-          <li>LocalStorage: Data storage for tasks.</li>
+        <h3 className="text-2xl font-semibold text-gray-800 mb-2">Technologies Used:</h3>
+        <ul className="list-disc list-inside text-gray-600">
+          <li>⚛️ ReactJS: The core framework for development.</li>
+          <li>💾 LocalStorage: For secure task storage.</li>
         </ul>
       </div>
-      <div className="text-center">
-        <a href="https://github.com/AjeteKr/ToDoList" className="text-blue-700 hover:underline mt-2 block text-lg">View on GitHub</a>
+      <div className="text-center mt-6">
+        <a href="https://github.com/AjeteKr/ToDoList" className="text-blue-500 hover:underline text-lg">View on GitHub</a>
       </div>
     </div>
   );
 }
-
 export default ToDoListPage;
