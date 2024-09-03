@@ -2,7 +2,7 @@
 import React from 'react';
 const BlazorBankManagementPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-teal-400 to-blue-600 p-6">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-400 to-blue-600 p-6">
       <h1 className="text-6xl font-extrabold text-white text-center mb-6">Blazor Bank Management System</h1>
       <p className="text-lg text-white text-center mb-4">
         A secure and efficient web application for managing bank accounts, built with Blazor.
