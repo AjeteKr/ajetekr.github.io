@@ -16,6 +16,29 @@ function AboutMePage() {
   const sections = {
     workExperience: (
       <div className="space-y-4">
+                <div className="border-l-4 border-purple-300 pl-4 bg-purple-200 text-white rounded-lg p-4">
+          <div className="flex justify-between items-center">
+            <div>
+              <h3 className="font-semibold">FullStack Developer</h3>
+              <p>📍 PerProgramera, Remote</p>
+            </div>
+            <div className="flex items-center">
+            <h3 className="font-semibold">09/2023-Present</h3>
+            <button onClick={() => toggleSection('workExperience4')} className="text-purple-700">
+              {expandedSections['workExperience4'] ? <FaMinus /> : <FaPlus />}
+            </button>
+            </div>
+          </div>
+          {expandedSections['workExperience4'] && (
+            <ul className="list-disc pl-5 mt-2 space-y-2">
+              <li>C#, .NET Core, ASP.NET Core, RESTful APIs</li>
+              <li>SQL Server, Entity Framework</li>
+              <li>React Hooks, State Management, React Router, Tailwind CSS</li>
+              <li>PWA Applications</li>
+            </ul>
+          )}
+        </div>
+
         <div className="border-l-4 border-purple-300 pl-4 bg-purple-200 text-white rounded-lg p-4">
           <div className="flex justify-between items-center">
             <div>
@@ -31,7 +54,8 @@ function AboutMePage() {
           </div>
           {expandedSections['workExperience1'] && (
             <ul className="list-disc pl-5 mt-2 space-y-2">
-              <li>Manage and process loan applications, evaluate credits, and ensure that all procedures comply with bank policies and financial regulations</li>
+              <li>Professional Skills: Credit Application Review, Loan Disbursement Support, Regulatory Compliance Support, Documentation Management, Administrative Support</li>
+              <li>Personal Skills: Analytical Thinking, Time Management, Team Collaboration</li>
             </ul>
           )}
         </div>
@@ -201,7 +225,7 @@ function AboutMePage() {
       </div>
     ),
     skills: (
-      <ul className="grid grid-cols-2 gap-4 bg-purple-200 rounded-lg shadow-lg">
+      <ul className="grid grid-cols-2 gap-4 bg-purple-200 rounded-lg shadow-lg p-6">
         <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Management Time</li>
         <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Project Management</li>
         <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Interpersonal Communication</li>
@@ -265,7 +289,7 @@ function AboutMePage() {
                 <div className="flex flex-col items-center">
                     <div className="flex space-x-4 mb-8">
                         {Object.keys(sections).map((section) => (
-                            <div key={section} className={`cursor-pointer rounded-full bg-white text-purple-600 h-16 w-16 md:h-24 md:w-24 text-lg font-semibold text-center flex items-center justify-center transition-colors duration-300 transform hover:scale-105 ${activeSection === section ? 'bg-purple-500 text-white' : 'hover:bg-purple-200'}`} onClick={() => setActiveSection(section)}>
+                            <div key={section} className={`cursor-pointer rounded-full h-16 w-16 md:h-24 md:w-24 text-lg font-semibold text-center flex items-center justify-center transition-colors duration-300 transform hover:scale-105 ${activeSection === section ? 'bg-purple-500 text-white' : 'bg-white text-purple-600 hover:bg-purple-200'}`} onClick={() => setActiveSection(section)}>
                                 {section === 'workExperience' && <FaBriefcase />}
                                 {section === 'education' && <FaGraduationCap />}
                                 {section === 'skills' && <FaStar />}
@@ -282,6 +306,5 @@ function AboutMePage() {
         </div>
     </div>
 );
-
 }
 export default AboutMePage;
