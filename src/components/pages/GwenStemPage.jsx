@@ -27,7 +27,7 @@ function GwenStemPage() {
                     "Sign up for events and track your progress."
                 ]} />
                 <Card title="Technologies Used" content={[
-                    "ReactJS: For building the user interface.",
+                    "ReactJS and PHP: For building the user interface.",
                     "Node.js: Backend server for handling requests.",
                     "MongoDB: Database for storing user data."
                 ]} />
