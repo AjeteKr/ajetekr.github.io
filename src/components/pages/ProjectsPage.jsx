@@ -1,13 +1,13 @@
 import React from "react"; 
 import { Link } from "react-router-dom"; 
-import LakeXplorerImage from "../../img/lakexplorer.png"; 
+import LakeXplorerImage from "../../img/lakexplorer.webp"; 
 import GwenStemImage from "../../img/gwenstem1.png"; 
-import BlazorBankImage from "../../img/blazor-bank.png"; 
-import noProjectsImage from "../../img/no-projects.png"; 
+import BlazorBankImage from "../../img/bankmanagment.png"; 
+import ToDoImage from "../../img/todoimage.webp"; 
 import { FaTimes } from "react-icons/fa"; 
 
 const projects = [ 
-  { title: "ToDoList Project", date: "November 2023", image: noProjectsImage, githubLink: "https://github.com/AjeteKr/ToDoList", projectLink: "/projects/todolist", }, 
+  { title: "ToDoList Project", date: "November 2023", image: ToDoImage, githubLink: "https://github.com/AjeteKr/ToDoList", projectLink: "/projects/todolist", }, 
   { title: "Lake Xplorer", date: "January 2024", image: LakeXplorerImage, githubLink: "https://github.com/AjeteKr/LakeXplorer", projectLink: "/projects/lakexplorer", }, 
   { title: "Gwen STEM", date: "May 2024", image: GwenStemImage, githubLink: "https://github.com/AjeteKr/StemGirls", projectLink: "/projects/gwenstem", }, 
   { title: "Blazor Bank Management System", date: "June 2024", image: BlazorBankImage, githubLink: "https://github.com/AjeteKr/BlazorBankManagementSystem", projectLink: "/projects/bankmanagement", }, 
