@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a86dfa7.css",
-    "main.js": "/static/js/main.089d421c.js",
-    "static/js/453.b52434ba.chunk.js": "/static/js/453.b52434ba.chunk.js",
-    "static/media/blazor-bank.png": "/static/media/blazor-bank.af22a5d9c3b36f5ffdc5.png",
-    "static/media/gwenstem1.png": "/static/media/gwenstem1.5c2ce38dd76a60938620.png",
-    "static/media/no-projects.png": "/static/media/no-projects.badd5f923acafc5b55e9.png",
-    "static/media/lakexplorer.png": "/static/media/lakexplorer.c073087a75fe1af2b57f.png",
+    "main.css": "/static/css/main.ec692ddc.css",
+    "main.js": "/static/js/main.43f98ea7.js",
+    "static/media/gwenstem1.png": "/static/media/gwenstem1.15f936fc654ddf8e93cd.png",
     "static/media/my_profile-removebg.png": "/static/media/my_profile-removebg.4829910a47a628befa90.png",
     "static/media/gwenstem.png": "/static/media/gwenstem.607bbe1a428e7183d985.png",
+    "static/media/lakexplorer.webp": "/static/media/lakexplorer.13bee3cfec447d5117ad.webp",
+    "static/media/todoimage.webp": "/static/media/todoimage.9847ff875111a1e59a7f.webp",
+    "static/media/todoimage.png": "/static/media/todoimage.757524f317c4048506fb.png",
     "static/media/vuejs-icon.png": "/static/media/vuejs-icon.56936e1d42f482b159da.png",
     "static/media/git-icon.png": "/static/media/git-icon.0b2e9b517d6a03181165.png",
     "static/media/myprofile2.jpeg": "/static/media/myprofile2.6e78c7ca457a06b0c83d.jpeg",
+    "static/media/completetask.png": "/static/media/completetask.33a0ec9f36642a834d35.png",
+    "static/media/deletetask.png": "/static/media/deletetask.a7e2938d0fffcac6033b.png",
+    "static/media/bankmanagment.png": "/static/media/bankmanagment.d5b762304eb70744fc01.png",
+    "static/media/addtask.png": "/static/media/addtask.bde692260c6af9622ced.png",
     "static/media/sqllite-icon.png": "/static/media/sqllite-icon.b68f49d9b0f2fa97e296.png",
     "static/media/javascript-icon.png": "/static/media/javascript-icon.19da6a7b9ed8db560458.png",
     "static/media/sqlserver-icon.png": "/static/media/sqlserver-icon.6d2c0f13a65075d5412f.png",
@@ -23,12 +26,11 @@
     "static/media/figma-icon.png": "/static/media/figma-icon.cb5ea98e42c0078b4c76.png",
     "static/media/dotnet-icon.png": "/static/media/dotnet-icon.2a92e290242642ebc609.png",
     "index.html": "/index.html",
-    "main.0a86dfa7.css.map": "/static/css/main.0a86dfa7.css.map",
-    "main.089d421c.js.map": "/static/js/main.089d421c.js.map",
-    "453.b52434ba.chunk.js.map": "/static/js/453.b52434ba.chunk.js.map"
+    "main.ec692ddc.css.map": "/static/css/main.ec692ddc.css.map",
+    "main.43f98ea7.js.map": "/static/js/main.43f98ea7.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a86dfa7.css",
-    "static/js/main.089d421c.js"
+    "static/css/main.ec692ddc.css",
+    "static/js/main.43f98ea7.js"
   ]
 }
