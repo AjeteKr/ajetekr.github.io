@@ -1,6 +1,6 @@
-
 import React from "react";
-import GwenStemImg from "../../img/gwenstem.png";
+import GwenStemImg from '../../assets/images/projects/gwenstem.png'
+
 function GwenStemPage() {
     return (
         <div className="relative container mx-auto px-6 py-12">

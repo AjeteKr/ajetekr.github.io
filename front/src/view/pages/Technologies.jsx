@@ -1,17 +1,16 @@
-
 import React from "react";
-import JavascriptIcon from "../../img/javascript-icon.png";
-import TypescriptIcon from "../../img/typescript-icon.png";
-import ReactIcon from "../../img/react-icon.png";
-import NextjsIcon from "../../img/nextjs-icon.png";
-import VuejsIcon from "../../img/vuejs-icon.png";
-import TailwindcssIcon from "../../img/tailwindcss-icon.png";
-import FigmaIcon from "../../img/figma-icon.png";
-import GitIcon from "../../img/git-icon.png";
-import DotNetIcon from "../../img/dotnet-icon.png";
-import SqlServerIcon from "../../img/sqlserver-icon.png";
-import SqlLiteIcon from "../../img/sqllite-icon.png";
-import AngularIcon from "../../img/angular-icon.png"
+import JavascriptIcon from "../../assets/icons/javascript-icon.png";
+import TypescriptIcon from "../../assets/icons/typescript-icon.png";
+import ReactIcon from "../../assets/icons/react-icon.png";
+import NextjsIcon from "../../assets/icons/nextjs-icon.png";
+import VuejsIcon from "../../assets/icons/vuejs-icon.png";
+import TailwindcssIcon from "../../assets/icons/tailwindcss-icon.png";
+import FigmaIcon from "../../assets/icons/figma-icon.png";
+import GitIcon from "../../assets/icons/git-icon.png";
+import DotNetIcon from "../../assets/icons/dotnet-icon.png";
+import SqlServerIcon from "../../assets/icons/sqlserver-icon.png";
+import SqlLiteIcon from "../../assets/icons/sqllite-icon.png";
+import AngularIcon from "../../assets/icons/angular-icon.png"
 
 function Technologies() {
   const technologies = [

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBriefcase, FaGraduationCap, FaStar, FaCertificate, FaLanguage, FaPlus, FaMinus } from 'react-icons/fa';
-import MyProfileImage from "../../img/myprofile2.jpeg";
+import MyProfileImage from '../../assets/images/profile/myprofile2.jpeg';
 
 function AboutMePage() {
   const [activeSection, setActiveSection] = useState('workExperience');

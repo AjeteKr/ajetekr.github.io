@@ -1,4 +1,5 @@
-import NoProjectImage from '../img/no-projects.png';
+import NoProjectImage from '../assets/no-projects.png';
+
 export default function NewProjectSelected({ onStartAddProject }) {
     return (
         <div className="mt-24 text-center w-2/3">

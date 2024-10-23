@@ -1,5 +1,5 @@
 import React from "react";
-import LakeImage from "../../img/lakexplorer.webp"; 
+import LakeImage from "../../assets/images/projects/lakexplorer.webp"; 
 
 const LakeXplorerPage = () => {
   return (

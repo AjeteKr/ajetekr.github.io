@@ -1,10 +1,10 @@
 import React from "react"; 
 import { Link } from "react-router-dom"; 
-import LakeXplorerImage from "../../img/lakexplorer.webp"; 
-import GwenStemImage from "../../img/gwenstem1.png"; 
-import BlazorBankImage from "../../img/bankmanagment.png"; 
-import ToDoImage from "../../img/todoimage.webp"; 
 import { FaTimes } from "react-icons/fa"; 
+import LakeXplorerImage from '../../assets/images/projects/lakexplorer.webp' 
+import GwenStemImage from "../../assets/images/projects/gwenstem1.png"; 
+import BlazorBankImage from "../../assets/images/projects/bankmanagment.png"; 
+import ToDoImage from "../../assets/images/projects/todoimage.webp"; 
 
 const projects = [ 
   { title: "ToDoList Project", date: "November 2023", image: ToDoImage, githubLink: "https://github.com/AjeteKr/ToDoList", projectLink: "/projects/todolist", }, 
@@ -43,7 +43,7 @@ const ProjectsPage = () => {
           ))} 
         </div> 
       </div> 
-    </div> 
+    </div>  
   ); 
 }; 
 export default ProjectsPage;

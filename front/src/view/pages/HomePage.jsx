@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaLinkedin, FaFacebook, FaGithub, FaInstagram } from 'react-icons/fa';
-import myProfileImage from '../../img/my_profile-removebg.png';
+import myProfileImage from '../../assets/images/profile/removebg.png';
 import './HomePage.css';
 
 const HomePage = () => {

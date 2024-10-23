@@ -1,8 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import ComplexNavbar from './components/ComplexNavbar.jsx';
-import * as Pages from './components/pages';
-import MainContainer from './components/MainContainer.jsx';
+import ComplexNavbar from './view/navbar/ComplexNavbar.jsx';
+import MainContainer from './view/core/MainContainer.jsx';
+import BlazorBankManagementPage from './view/projectpages/BlazorBankManagementPage.jsx';
+import LakeXplorerPage from './view/projectpages/LakeXplorerPage.jsx';
+import ToDoList from './view/projectpages/ToDoList.jsx'
+import AboutMePage from './view/pages/AboutMePage.jsx';
+import GwenStemPage from './view/projectpages/GwenStemPage.jsx';
+import Technologies from './view/pages/Technologies.jsx';
+import ProjectsPage from './view/pages/ProjectsPage.jsx';
+import ContactPage from './view/pages/ContactPage.jsx';
 
 function App() {
 
@@ -11,14 +18,14 @@ function App() {
       <ComplexNavbar />
         <Routes>
           <Route exact path='/' element={<MainContainer />} />
-          <Route exact path="/projects/bankmanagement" element={<Pages.BlazorBankManagementPage />} />
-          <Route exact path="/projects/lakexplorer" element={<Pages.LakeXplorerPage />} />
-          <Route exact path="/projects/todolist" element={<Pages.ToDoListPage />} />
-          <Route exact path="/aboutme" element={<Pages.AboutMePage />} />
-          <Route exact path="/projects/gwenstem" element={<Pages.GwenStemPage />} />
-          <Route exact path="/technologies" element={<Pages.Technologies />} />
-          <Route exact path="/projects" element={<Pages.ProjectsPage />} />
-          <Route exact path="/contact" element={<Pages.ContactPage />} />
+          <Route exact path="/projects/bankmanagement" element={<BlazorBankManagementPage />} />
+          <Route exact path="/projects/lakexplorer" element={<LakeXplorerPage />} />
+          <Route exact path="/projects/todolist" element={<ToDoList />} />
+          <Route exact path="/aboutme" element={<AboutMePage />} />
+          <Route exact path="/projects/gwenstem" element={<GwenStemPage />} />
+          <Route exact path="/technologies" element={<Technologies />} />
+          <Route exact path="/projects" element={<ProjectsPage />} />
+          <Route exact path="/contact" element={<ContactPage />} />
         </Routes>
     </>
   );

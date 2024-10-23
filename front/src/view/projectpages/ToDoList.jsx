@@ -1,8 +1,8 @@
 import React from "react";
-import ToDoImage from "../../img/todoimage.png";
-import AddTask from "../../img/addtask.png";
-import DeleteTask from "../../img/deletetask.png"; 
-import CompleteTask from "../../img/completetask.png"; 
+import ToDoImage from "../../assets/images/projects/todoimage.png";
+import AddTask from "../../assets/images/projects/addtask.png";
+import DeleteTask from "../../assets/images/projects/deletetask.png"; 
+import CompleteTask from "../../assets/images/projects/completetask.png"; 
 
 const ToDoListPage = () => {
   return (

@@ -1,5 +1,5 @@
-
 import React from 'react';
+
 const BlazorBankManagementPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-400 to-blue-600 p-6">
