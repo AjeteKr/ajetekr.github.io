@@ -5,13 +5,16 @@ import LakeXplorerImage from '../../assets/images/projects/lakexplorer.webp'
 import GwenStemImage from "../../assets/images/projects/gwenstem1.png"; 
 import BlazorBankImage from "../../assets/images/projects/bankmanagment.png"; 
 import ToDoImage from "../../assets/images/projects/todoimage.webp"; 
+import TicTacToeImage from "../../assets/images/projects/TicTacToeImage.webp"
 
 const projects = [ 
   { title: "ToDoList Project", date: "November 2023", image: ToDoImage, githubLink: "https://github.com/AjeteKr/ToDoList", projectLink: "/projects/todolist", }, 
   { title: "Lake Xplorer", date: "January 2024", image: LakeXplorerImage, githubLink: "https://github.com/AjeteKr/LakeXplorer", projectLink: "/projects/lakexplorer", }, 
   { title: "Gwen STEM", date: "May 2024", image: GwenStemImage, githubLink: "https://github.com/AjeteKr/StemGirls", projectLink: "/projects/gwenstem", }, 
-  { title: "Blazor Bank Management System", date: "June 2024", image: BlazorBankImage, githubLink: "https://github.com/AjeteKr/BlazorBankManagementSystem", projectLink: "/projects/bankmanagement", }, 
+  { title: "Bank Management", date: "June 2024", image: BlazorBankImage, githubLink: "https://github.com/AjeteKr/BlazorBankManagementSystem", projectLink: "/projects/bankmanagement", }, 
+  { title: "Tic Tac Toe Game", date: "October 2024", image: TicTacToeImage, githubLink: "https://github.com/AjeteKr/TicTacToe", projectLink: "/projects/tictactoe", }, 
 ]; 
+
 const Project = ({ title, date, image, githubLink, projectLink, reversed }) => { 
   return ( 
     <div className={`relative flex flex-col md:flex-row ${reversed ? "md:flex-row-reverse" : "" } items-center mb-12`} > 

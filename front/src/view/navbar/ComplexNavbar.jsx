@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const navListMenuItems = [
-  { title: "ToDoList", href: "/projects/todolist" },
+  { title: "To-Do-List", href: "/projects/todolist" },
   { title: "LakeXplorer", href: "/projects/lakexplorer" },
   { title: "GwenStem", href: "/projects/gwenstem" },
-  { title: "BlazorBankManagementSystem", href: "/projects/bankmanagement" },
+  { title: "Bank Management", href: "/projects/bankmanagement" },
+  { title: "Tic-Tac-Toe", href: "/projects/tictactoe"},
 ];
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
