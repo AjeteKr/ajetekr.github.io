@@ -49,7 +49,6 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                {/* Modern Profile Picture Design */}
                 <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0 fade-in-right">
                     <div className="profile-container">
                         <div className="profile-frame">
