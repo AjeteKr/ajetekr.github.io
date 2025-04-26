@@ -31,23 +31,47 @@ function NavListMenu() {
   );
 }
 function NavList() {
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <ul className="flex flex-col lg:flex-row lg:items-center gap-6">
       <li>
         <NavListMenu />
       </li>
       <li>
-        <Link to="/#home" className="text-gray-800 text-sm hover:text-purple-600 transition"> Home </Link>
+        <button
+          onClick={() => handleScroll("home")}
+          className="text-gray-800 text-sm hover:text-purple-600 transition"
+        >
+          Home
+        </button>
       </li>
       <li>
-        <Link to="/#about" className="text-gray-800 text-sm hover:text-purple-600 transition"> About Me </Link>
+        <button
+          onClick={() => handleScroll("about")}
+          className="text-gray-800 text-sm hover:text-purple-600 transition"
+        >
+          About Me
+        </button>
       </li>
       <li>
-        <Link to="/#technologies" className="text-gray-800 text-sm hover:text-purple-600 transition"> Technologies </Link>
+        <button
+          onClick={() => handleScroll("technologies")}
+          className="text-gray-800 text-sm hover:text-purple-600 transition"
+        >
+          Technologies
+        </button>
       </li>
       <li>
         <Link to="/#contact">
-          <button className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition"> Hire Me </button>
+          <button className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition">
+            Hire Me
+          </button>
         </Link>
       </li>
     </ul>

@@ -1,0 +1,72 @@
+/* Create this new CSS file and import it in your AboutMePage component */
+
+/* Smooth transitions */
+.tab-content {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Card hover effects */
+.experience-card, .education-card {
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover, .education-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill tags animation */
+.skill-tag {
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-opacity: 0.3;
+    transform: translateY(-2px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tab-content {
+        padding: 1rem;
+    }
+    
+    .experience-card, .education-card {
+        margin-bottom: 1rem;
+    }
+}

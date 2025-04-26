@@ -8,7 +8,6 @@ import ToDoList from './view/projectpages/ToDoList.jsx'
 import TicTacToePage from './view/projectpages/TicTacToePage.jsx';
 import AboutMePage from './view/pages/AboutMePage.jsx';
 import GwenStemPage from './view/projectpages/GwenStemPage.jsx';
-import Technologies from './view/pages/Technologies.jsx';
 import ProjectsPage from './view/pages/ProjectsPage.jsx';
 import ContactPage from './view/pages/ContactPage.jsx';
 
@@ -25,7 +24,6 @@ function App() {
           <Route exact path='/projects/tictactoe' element={<TicTacToePage/>}/>
           <Route exact path="/aboutme" element={<AboutMePage />} />
           <Route exact path="/projects/gwenstem" element={<GwenStemPage />} />
-          <Route exact path="/technologies" element={<Technologies />} />
           <Route exact path="/projects" element={<ProjectsPage />} />
           <Route exact path="/contact" element={<ContactPage />} />
         </Routes>

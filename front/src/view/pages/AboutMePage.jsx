@@ -1,310 +1,321 @@
-import React, { useState } from "react";
-import { FaBriefcase, FaGraduationCap, FaStar, FaCertificate, FaLanguage, FaPlus, FaMinus } from 'react-icons/fa';
-import MyProfileImage from '../../assets/images/profile/myprofile2.jpeg';
+import React, { useState } from 'react';
+import { 
+    FaBriefcase, FaGraduationCap, FaTools, FaLanguage,
+    FaChevronDown, FaChevronUp, FaCalendar, FaMapMarkerAlt 
+} from 'react-icons/fa';
 
-function AboutMePage() {
-  const [activeSection, setActiveSection] = useState('workExperience');
-  const [expandedSections, setExpandedSections] = useState({});
+const AboutMePage = () => {
+    const [activeTab, setActiveTab] = useState('experience');
+    const [expandedItems, setExpandedItems] = useState({});
 
-  const toggleSection = (section) => {
-    setExpandedSections((prevState) => ({
-      ...prevState,
-      [section]: !prevState[section],
-    }));
-  };
+    const toggleItem = (id) => {
+        setExpandedItems(prev => ({
+            ...prev,
+            [id]: !prev[id]
+        }));
+    };
 
-  const sections = {
-    workExperience: (
-      <div className="space-y-4">
-                <div className="border-l-4 border-purple-300 pl-4 bg-purple-200 text-white rounded-lg p-4">
-          <div className="flex justify-between items-center">
-            <div>
-              <h3 className="font-semibold">FullStack Developer</h3>
-              <p>📍 PerProgramera, Remote</p>
-            </div>
-            <div className="flex items-center">
-            <h3 className="font-semibold">09/2023-Present</h3>
-            <button onClick={() => toggleSection('workExperience4')} className="text-purple-700">
-              {expandedSections['workExperience4'] ? <FaMinus /> : <FaPlus />}
-            </button>
-            </div>
-          </div>
-          {expandedSections['workExperience4'] && (
-            <ul className="list-disc pl-5 mt-2 space-y-2">
-              <li>C#, .NET Core, ASP.NET Core, RESTful APIs</li>
-              <li>SQL Server, Entity Framework</li>
-              <li>React Hooks, State Management, React Router, Tailwind CSS</li>
-              <li>PWA Applications</li>
-            </ul>
-          )}
-        </div>
+    const experiences = [
+        {
+            id: 'exp1',
+            title: 'Software Developer',
+            company: 'Homera',
+            period: '02/2025-Present',
+            location: 'Remote',
+            type: 'Remote',
+            skills: [
+                'Rest API',
+                'MUD Blazor',
+                'JavaScript Query',
+                'AZURE Devops & Git'
+            ]
+        },
+        {
+            id: 'exp2',
+            title: 'Software Engineer & Co-Founder',
+            company: 'n\'Rruge',
+            period: '11/2024-Present',
+            location: 'Remote',
+            type: 'Remote',
+            skills: [
+                'TypeScript, Next.js, .NET, REST API',
+                'Real-time data handling, WebSocket communication',
+                'Payment gateway integration, security best practices',
+                'UI/UX optimization, performance tuning',
+                'Project management, leadership, team collaboration'
+            ]
+        },
+        {
+            id: 'exp3',
+            title: 'Software Engineer',
+            company: 'Pabau Clinic Software',
+            period: '10/2024-01/2025',
+            location: 'Prishtina',
+            type: 'On-site',
+            skills: [
+                'Working with Typescript on a Next.js React framework',
+                'Integrating GraphQL APIs',
+                'Extending and reusing components from ant.design',
+                'Experience with Jest for testing JavaScript applications',
+                'Understanding of UX design principles',
+                'Experience in delivering in an agile delivery model',
+                'Write modern React components from scratch',
+                'Solving complex problems within the team'
+            ]
+        },
+        {
+            id: 'exp4',
+            title: 'Credit Administration and Disbursement Department – Assistant',
+            company: 'Banka Per Biznes (BPB)',
+            period: '04/2024-09/2024',
+            location: 'Prishtina',
+            type: 'On-site',
+            skills: [
+                'Credit Application Review, Loan Disbursement Support, Regulatory Compliance Support',
+                'Documentation Management, Administrative Support',
+                'Analytical Thinking, Time Management, Team Collaboration'
+            ]
+        },
+        {
+            id: 'exp5',
+            title: 'Credit Administration and Disbursement Department - Intern',
+            company: 'Banka Per Biznes (BPB)',
+            period: '02/2024-04/2024',
+            location: 'Prishtina',
+            type: 'On-site',
+            skills: [
+                'Credit Administration, Loan Disbursement, Compliance and Documentation',
+                'Risk Assessment, Loan Monitoring',
+                'Detail-Oriented, Analytical Thinking, Organization, Problem-Solving'
+            ]
+        },
+        {
+            id: 'exp6',
+            title: 'Program Junior',
+            company: 'Banka Per Biznes (BPB)',
+            period: '12/2023-01/2024',
+            location: 'Prishtina',
+            type: 'On-site',
+            skills: [
+                'Financial Analysis, Customer Service, Account Management, Banking Systems, Regulatory Knowledge',
+                'Effective Communication, Teamwork, Problem-Solving, Time Management, Professional Ethics'
+            ]
+        }
+    ];
 
-        <div className="border-l-4 border-purple-300 pl-4 bg-purple-200 text-white rounded-lg p-4">
-          <div className="flex justify-between items-center">
-            <div>
-              <h3 className="font-semibold">Junior Credit Administrator</h3>
-              <p>📍 BPB, Pristina, Kosovo</p>
-            </div>
-            <div className="flex items-center">
-            <h3 className="font-semibold">04/2024-Present</h3>
-            <button onClick={() => toggleSection('workExperience1')} className="text-purple-700">
-              {expandedSections['workExperience1'] ? <FaMinus /> : <FaPlus />}
-            </button>
-            </div>
-          </div>
-          {expandedSections['workExperience1'] && (
-            <ul className="list-disc pl-5 mt-2 space-y-2">
-              <li>Professional Skills: Credit Application Review, Loan Disbursement Support, Regulatory Compliance Support, Documentation Management, Administrative Support</li>
-              <li>Personal Skills: Analytical Thinking, Time Management, Team Collaboration</li>
-            </ul>
-          )}
-        </div>
-        <div className="border-l-4 border-purple-300 pl-4 bg-purple-200 text-white rounded-lg p-4 flex flex-col">
-          <div className="flex justify-between items-center">
-            <div>
-              <h3 className="font-semibold">Intern Credit Administration</h3>
-              <p>📍 BPB, Pristina, Kosovo</p>
-            </div>
-            <div className="flex items-center">
-            <h3 className="font-semibold">02/2024-04/2024</h3>
-            <button onClick={() => toggleSection('workExperience2')} className="text-purple-700">
-              {expandedSections['workExperience2'] ? <FaMinus /> : <FaPlus />}
-            </button>
-            </div>
-          </div>
-          {expandedSections['workExperience2'] && (
-            <ul className="list-disc pl-5 mt-2 space-y-2">
-              <li>As a Credit Administration Intern, I assist in managing and processing loan applications, perform preliminary credit evaluations, and ensure that all documentation and procedures adhere to bank policies and financial regulations. I also support the credit team in maintaining accurate records and providing excellent customer service.
-              </li>
-            </ul>
-          )}
-        </div>
-        <div className="border-l-4 border-purple-300 pl-4 bg-purple-200 text-white rounded-lg p-4 flex flex-col">
-          <div className="flex justify-between items-center">
-            <div>
-              <h3 className="font-semibold">Junior Program</h3>
-              <p>📍 BPB, Pristina, Kosovo</p>
-            </div>
-            <div className="flex items-center">
-            <h3 className="font-semibold">12/2023-02/2024</h3>
-            <button onClick={() => toggleSection('workExperience3')} className="text-purple-700">
-              {expandedSections['workExperience3'] ? <FaMinus /> : <FaPlus />}
-            </button>
-            </div>
-          </div>
-          {expandedSections['workExperience3'] && (
-            <ul className="list-disc pl-5 mt-2 space-y-2">
-              <li>As a participant in the BPB Junior Program, I engaged in comprehensive training and development, rotating through various departments to gain hands-on experience in different banking functions. My responsibilities included assisting with customer service, processing transactions, and supporting team projects, all while adhering to bank policies and financial regulations. This program provided me with valuable skills in financial markets, professional communication, and problem-solving.</li>
-            </ul>
-          )}
-        </div>
-      </div>
-    ),
-    education: (
-      <div className="space-y-4">
-        <div className="border-l-4 border-purple-300 pl-4 bg-purple-200 text-white rounded-lg p-4 flex flex-col">
-          <div className="flex justify-between items-center">
-            <div>
-              <h3 className="font-semibold">Financial Mathematics in Banking and Insurance</h3>
-              <p>📍 University of Pristina, Pristina, Kosovo</p>
-            </div>
-            <div className="flex items-center">
-              <h3 className="font-semibold">10/2019-Present</h3>
-              <button onClick={() => toggleSection('education1')} className="text-purple-700">
-                {expandedSections['education1'] ? <FaMinus /> : <FaPlus />}
-              </button>
-            </div>
-          </div>
-          {expandedSections['education1'] && (
-            <ul className="list-disc pl-5 mt-2 space-y-2">
-              <li>Algorithm, Java Programming, Web Programming with HTML, CSS and JS, Data with R</li>
-              <li>Problem solving, Quantitative analysis, Data interpretation, Financial decision-making</li>
-            </ul>
-          )}
-        </div>
-        <div className="border-l-4 border-purple-300 pl-4 bg-purple-200 text-white rounded-lg p-4 flex flex-col">
-          <div className="flex justify-between items-center">
-            <div>
-              <h3 className="font-semibold">C# .NET Developer</h3>
-              <p>📍 PerProgramera, Online</p>
-            </div>
-            <div className="flex items-center">
-              <h3 className="font-semibold">11/2022-09/2023</h3>
-              <button onClick={() => toggleSection('education2')} className="text-purple-700">
-                {expandedSections['education2'] ? <FaMinus /> : <FaPlus />}
-              </button>
-            </div>
-          </div>
-          {expandedSections['education2'] && (
-            <ul className="list-disc pl-5 mt-2 space-y-2">
-              <li>C# Fundamentals: Variables, Classes, Objects, Methods, and Object-Oriented Programming</li>
-              <li>C# programming with Visual Studio IDE</li>
-              <li>.NET Framework and .NET Core</li>
-              <li>C# database basics: SQL Server and Entity Framework</li>
-              <li>Data and data structures in C#: Arrays, Lists, Stacks, Queues, and Dictionaries</li>
-              <li>Desktop application development with WPF</li>
-              <li>Web application development with ASP.NET Core and MVC</li>
-              <li>Using RESTful API in C#</li>
-              <li>Debugging in C#</li>
-              <li>Cryptography and Security in C#</li>
-              <li>Asynchronous Programming with Async Await and webApi</li>
-              <li>Web app Ui with Blazor</li>
-              <li>Platform independent application with MAUI.NET</li>
-            </ul>
-          )}
-        </div>
-        <div className="border-l-4 border-purple-300 pl-4 bg-purple-200 text-white rounded-lg p-4 flex flex-col">
-          <div className="flex justify-between items-center">
-            <div>
-              <h3 className="font-semibold">React Developer</h3>
-              <p>📍 Udemy, Online</p>
-            </div>
-            <div className="flex items-center">
-              <h3 className="font-semibold">05/2024-07/2024</h3>
-              <button onClick={() => toggleSection('education6')} className="text-purple-700">
-                {expandedSections['education6'] ? <FaMinus /> : <FaPlus />}
-              </button>
-            </div>
-          </div>
-          {expandedSections['education6'] && (
-            <ul className="list-disc pl-5 mt-2 space-y-2">
-              <li>React Fundamentals: Mastery of the core concepts of React, including components, JSX, state, and props.</li>
-              <li>Component Lifecycle: Understanding the lifecycle methods of React components and how to manage component state and side effects using hooks like 'useState' and 'useEffect'.</li>
-              <li>Routing: Ability to implement client-side routing in a React application using React Router.</li>
-              <li>State Management with Redux: Proficiency in managing application state using Redux, including actions, reducers, and the Redux store.</li>
-              <li>Asynchronous Operations: Handling asynchronous operations in React using Redux Thunk and integrating with APIs.</li>
-              <li>Advanced React Patterns: Knowledge of advanced React patterns like higher-order components, context API, and render props.</li>
-              <li>Testing: Skills in writing unit tests for React components using tools like Jest and Enzyme.</li>
-              <li>Performance Optimization: Techniques for optimizing the performance of React applications.</li>
-              <li>Project Deployment: Experience in deploying React applications to production environments.</li>
-            </ul>
-          )}
-        </div>
-        <div className="border-l-4 border-purple-300 pl-4 bg-purple-200 text-white rounded-lg p-4 flex flex-col">
-          <div className="flex justify-between items-center">
-            <div>
-              <h3 className="font-semibold">Network Administrator</h3>
-              <p>📍 Infotech - Xpertt, Pristina, Kosovo</p>
-            </div>
-            <div className="flex items-center">
-              <h3 className="font-semibold">02/2023-05/2023</h3>
-              <button onClick={() => toggleSection('education3')} className="text-purple-700">
-                {expandedSections['education3'] ? <FaMinus /> : <FaPlus />}
-              </button>
-            </div>
-          </div>
-          {expandedSections['education3'] && (
-            <ul className="list-disc pl-5 mt-2 space-y-2">
-              <li>Network: Network Fundamentals, IPv4 Routing and IPv6, Layer 2 Technologies, Layer 3 Routing, OSPF, BGP, Services</li>
-              <li>Systems: Windows Server Fundamentals, Implementing DNS servers, Active Directory and Group Policy, Linux Fundamentals, Linux Server DNS, DHCP, Mail, Linux Security</li>
-              <li>Virtualization - Virtualized Servers Fundamentals, Virtual machine management, Configuring and managing virtual networks</li>
-              <li>Automation - Python Programming, Python Automation Fundamental</li>
-            </ul>
-          )}
-        </div>
-        <div className="border-l-4 border-purple-300 pl-4 bg-purple-200 text-white rounded-lg p-4 flex flex-col">
-          <div className="flex justify-between items-center">
-            <div>
-              <h3 className="font-semibold">Front End Developer</h3>
-              <p>📍 SHPIK, Online</p>
-            </div>
-            <div className="flex items-center">
-              <h3 className="font-semibold">05/2023-07/2023</h3>
-              <button onClick={() => toggleSection('education4')} className="text-purple-700">
-                {expandedSections['education4'] ? <FaMinus /> : <FaPlus />}
-              </button>
-            </div>
-          </div>
-          {expandedSections['education4'] && (
-            <ul className="list-disc pl-5 mt-2 space-y-2">
-              <li>HTML5, CSS, JS, Git</li>
-              <li>Angular, React</li>
-            </ul>
-          )}
-        </div>
-      </div>
-    ),
-    skills: (
-      <ul className="grid grid-cols-2 gap-4 bg-purple-200 rounded-lg shadow-lg p-6">
-        <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Management Time</li>
-        <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Project Management</li>
-        <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Interpersonal Communication</li>
-        <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Problem Solving</li>
-        <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Adaptability</li>
-        <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Leadership & Collaboration</li>
-        <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Attention to Detail</li>
-        <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Critical Thinking & Creativity</li>
-        <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Work Ethic</li>
-        <li className="bg-white text-purple-800 hover:bg-purple-400 transition duration-300 p-4 rounded-lg text-center">Self-learning</li>
-      </ul>
-    ),
-    certifications: (
-      <ul className="list-none p-6 bg-purple-200 rounded-lg shadow-lg">
-        <li className="relative mb-6">
-          <div className="absolute w-3 h-3 bg-white rounded-full -left-1.5"></div>
-          <div className="p-4 bg-white text-purple-800 rounded-lg shadow-md">C# .NET Developer, PerProgramera – 09/2023</div>
-        </li>
-        <li className="relative mb-6">
-          <div className="absolute w-3 h-3 bg-white rounded-full -left-1.5"></div>
-          <div className="p-4 bg-white text-purple-800 rounded-lg shadow-md">Network Administrator, Infotech – 05/2023</div>
-        </li>
-        <li className="relative mb-6">
-          <div className="absolute w-3 h-3 bg-white rounded-full -left-1.5"></div>
-          <div className="p-4 bg-white text-purple-800 rounded-lg shadow-md">Cybersecurity Laws, Open Data – 03/2023</div>
-        </li>
-        <li className="relative mb-6">
-          <div className="absolute w-3 h-3 bg-white rounded-full -left-1.5"></div>
-          <div className="p-4 bg-white text-purple-800 rounded-lg shadow-md">Shaping the Future, ICK – 12/2022</div>
-        </li>
-        <li className="relative mb-6">
-          <div className="absolute w-3 h-3 bg-white rounded-full -left-1.5"></div>
-          <div className="p-4 bg-white text-purple-800 rounded-lg shadow-md">Emotional Intelligence, IJR Student – 11/2022</div>
-        </li>
-      </ul>
-    ),
-    languages: (
-      <ul className="flex flex-col space-y-4 bg-purple-200 rounded-lg p-6 shadow-lg">
-        <li className="relative bg-white text-purple-900 hover:bg-purple-300 transition duration-300 p-4 rounded-lg flex items-center justify-between transform hover:translate-x-1 hover:shadow-lg cursor-pointer">
-          <span className="font-semibold">Albanian</span>
-          <span className="text-purple-600">🌍</span>
-        </li>
-        <li className="relative bg-white text-purple-900 hover:bg-purple-300 transition duration-300 p-4 rounded-lg flex items-center justify-between transform hover:translate-x-1 hover:shadow-lg cursor-pointer">
-          <span className="font-semibold">English</span>
-          <span className="text-purple-600">🌍</span>
-        </li>
-      </ul>
-    ),
-  };
+    const education = [
+        {
+            id: 'edu1',
+            degree: 'Financial Mathematics in Banking and Insurance',
+            institution: 'University of Pristina "Hasan Prishtina"',
+            period: '10/2019-06/2024',
+            location: 'Prishtina',
+            details: [
+                'Economics: Financial Analysis, Tax Compliance, Risk Assessment',
+                'Mathematics: Quantitative Analysis, Actuarial Concepts',
+                'Technology: MS Office, R, HTML, CSS, JS, Java'
+            ]
+        },
+        {
+            id: 'edu2',
+            degree: 'Master Node JS & Deno.js',
+            institution: 'Udemy',
+            period: '10/2024-Present',
+            location: 'Online',
+            details: [
+                'Technologies: Node.js, Express.js, MySQL (Sequelize), MongoDB (Mongoose), Stripe.js, GraphQL, WebSockets, TypeScript, Deno.js',
+                'Key Skills: REST APIs, Authentication, File Upload, MVC Pattern, Deployment, Automated Testing'
+            ]
+        },
+        {
+            id: 'edu3',
+            degree: 'React - The Complete Guide 2024 (incl. Next.js, Redux)',
+            institution: 'Udemy',
+            period: '08/2024-10/2024',
+            location: 'Online',
+            details: [
+                'Technologies: React.js, Redux, Redux Toolkit, Next.js, React Router, TypeScript, Tailwind, Framer Motion',
+                'Skills: Components, Hooks, Form Actions, Server Components, State Management, Authentication, Animations, Unit Testing, Deployment',
+                'Tools & Practices: Styled Components, CSS Modules, Debugging, Portals, Http Requests, and Best Practices'
+            ]
+        },
+        {
+            id: 'edu4',
+            degree: 'C# .NET Developer',
+            institution: 'PerProgramera',
+            period: 'Ongoing',
+            location: 'Online',
+            details: [
+                'Technologies: C#, .NET Framework, .NET Core, SQL Server, Entity Framework, ASP.NET Core, Blazor, MAUI.NET',
+                'Skills: OOP, RESTful APIs, Asynchronous Programming, Debugging, Security',
+                'Development Areas: Desktop apps, web apps, UI design, and platform-independent applications'
+            ]
+        }
+    ];
 
+    const skills = {
+        'Programming & Frameworks': ['React.js', 'Next.js', 'TypeScript', 'Node.js', 'Express.js', 'C#', '.NET', 'ASP.NET Core', 'Blazor'],
+        'Tools & Libraries': ['Redux', 'Tailwind CSS', 'Ant Design', 'Jest', 'GraphQL', 'REST APIs', 'MongoDB', 'MySQL'],
+        'Development Practices': ['MVC Pattern', 'Agile', 'Authentication', 'Deployment', 'Asynchronous Programming'],
+        'UI/UX & Design': ['Component-based architecture', 'responsive design', 'UX principles'],
+        'Soft Skills': ['Analytical Thinking', 'Collaboration', 'Problem-Solving', 'Time Management']
+    };
 
-  return (
-    <div id="about" className="bg-gradient-to-r from-purple-500 to-pink-500 min-h-screen flex flex-col items-center p-6 md:p-20">
-        <div className="container mx-auto flex flex-col items-center">
-            <div className="text-center mb-12">
-                <img src={MyProfileImage} alt="Profile" className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white" />
-                <h1 className="text-4xl md:text-5xl font-bold text-purple mb-2">Ajete Krasniqi</h1>
-                <p className="text-lg text-purple">Passionate software developer with a diverse background in technology and banking.</p>
-            </div>
-            <div className="w-full">
-                <div className="flex flex-col items-center">
-                    <div className="flex space-x-4 mb-8">
-                        {Object.keys(sections).map((section) => (
-                            <div key={section} className={`cursor-pointer rounded-full h-16 w-16 md:h-24 md:w-24 text-lg font-semibold text-center flex items-center justify-center transition-colors duration-300 transform hover:scale-105 ${activeSection === section ? 'bg-purple-500 text-white' : 'bg-white text-purple-600 hover:bg-purple-200'}`} onClick={() => setActiveSection(section)}>
-                                {section === 'workExperience' && <FaBriefcase />}
-                                {section === 'education' && <FaGraduationCap />}
-                                {section === 'skills' && <FaStar />}
-                                {section === 'certifications' && <FaCertificate />}
-                                {section === 'languages' && <FaLanguage />}
-                            </div>
-                        ))}
-                    </div>
-                    <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg w-full md:w-2/3">
-                        {sections[activeSection]}
-                    </div>
+    const languages = [
+        { language: 'Albanian', proficiency: 'Native' },
+        { language: 'English', proficiency: 'Professional' }
+    ];
+
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-purple-800 via-purple-900 to-pink-800 py-16 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+                {/* Navigation Tabs */}
+                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                    {[
+                        { id: 'experience', icon: FaBriefcase, label: 'Experience' },
+                        { id: 'education', icon: FaGraduationCap, label: 'Education' },
+                        { id: 'skills', icon: FaTools, label: 'Skills' },
+                        { id: 'languages', icon: FaLanguage, label: 'Languages' }
+                    ].map(tab => (
+                        <button
+                            key={tab.id}
+                            onClick={() => setActiveTab(tab.id)}
+                            className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-300
+                                ${activeTab === tab.id 
+                                    ? 'bg-purple-500 text-white shadow-lg' 
+                                    : 'bg-white bg-opacity-10 text-purple-200 hover:bg-opacity-20'}`}
+                        >
+                            <tab.icon className="w-4 h-4" />
+                            {tab.label}
+                        </button>
+                    ))}
+                </div>
+
+                {/* Content Sections */}
+                <div className="space-y-6">
+                    {/* Experience Section */}
+                    {activeTab === 'experience' && (
+                        <div className="space-y-6">
+                            {experiences.map(exp => (
+                                <div key={exp.id} 
+                                     className="bg-white bg-opacity-5 backdrop-blur-sm rounded-xl overflow-hidden transition-all duration-300 hover:bg-opacity-10">
+                                    <div className="p-6">
+                                        <div className="flex justify-between items-start">
+                                            <div>
+                                                <h3 className="text-xl font-semibold text-white">{exp.title}</h3>
+                                                <p className="text-purple-300 text-lg">{exp.company}</p>
+                                                <div className="flex items-center gap-4 mt-2 text-purple-200">
+                                                    <span className="flex items-center gap-1">
+                                                        <FaCalendar className="w-4 h-4" />
+                                                        {exp.period}
+                                                    </span>
+                                                    <span className="flex items-center gap-1">
+                                                        <FaMapMarkerAlt className="w-4 h-4" />
+                                                        {exp.location}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <button
+                                                onClick={() => toggleItem(exp.id)}
+                                                className="text-purple-300 hover:text-white transition-colors"
+                                            >
+                                                {expandedItems[exp.id] ? <FaChevronUp /> : <FaChevronDown />}
+                                            </button>
+                                        </div>
+                                        {expandedItems[exp.id] && (
+                                            <div className="mt-4 pl-4 border-l-2 border-purple-500">
+                                                <ul className="space-y-2">
+                                                    {exp.skills.map((skill, index) => (
+                                                        <li key={index} className="text-purple-200">• {skill}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Education Section */}
+                    {activeTab === 'education' && (
+                        <div className="space-y-6">
+                            {education.map(edu => (
+                                <div key={edu.id} 
+                                     className="bg-white bg-opacity-5 backdrop-blur-sm rounded-xl overflow-hidden">
+                                    <div className="p-6">
+                                        <div className="flex justify-between items-start">
+                                            <div>
+                                                <h3 className="text-xl font-semibold text-white">{edu.degree}</h3>
+                                                <p className="text-purple-300 text-lg">{edu.institution}</p>
+                                                <div className="flex items-center gap-4 mt-2 text-purple-200">
+                                                    <span className="flex items-center gap-1">
+                                                        <FaCalendar className="w-4 h-4" />
+                                                        {edu.period}
+                                                    </span>
+                                                    <span className="flex items-center gap-1">
+                                                        <FaMapMarkerAlt className="w-4 h-4" />
+                                                        {edu.location}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <button
+                                                onClick={() => toggleItem(edu.id)}
+                                                className="text-purple-300 hover:text-white transition-colors"
+                                            >
+                                                {expandedItems[edu.id] ? <FaChevronUp /> : <FaChevronDown />}
+                                            </button>
+                                        </div>
+                                        {expandedItems[edu.id] && (
+                                            <div className="mt-4 pl-4 border-l-2 border-purple-500">
+                                                <ul className="space-y-2">
+                                                    {edu.details.map((detail, index) => (
+                                                        <li key={index} className="text-purple-200">• {detail}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Skills Section */}
+                    {activeTab === 'skills' && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {Object.entries(skills).map(([category, skillList]) => (
+                                <div key={category} 
+                                     className="bg-white bg-opacity-5 backdrop-blur-sm rounded-xl p-6">
+                                    <h3 className="text-lg font-semibold text-white mb-4">{category}</h3>
+                                    <div className="flex flex-wrap gap-2">
+                                        {skillList.map((skill, index) => (
+                                            <span key={index} 
+                                                  className="px-3 py-1 bg-purple-500 bg-opacity-20 rounded-full text-purple-200 text-sm">
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Languages Section */}
+                    {activeTab === 'languages' && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {languages.map((lang, index) => (
+                                <div key={index} 
+                                     className="bg-white bg-opacity-5 backdrop-blur-sm rounded-xl p-6">
+                                    <h3 className="text-xl font-semibold text-white">{lang.language}</h3>
+                                    <p className="text-purple-300 mt-2">{lang.proficiency}</p>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
-    </div>
-);
-}
+    );
+};
 export default AboutMePage;
