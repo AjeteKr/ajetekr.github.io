@@ -7,6 +7,7 @@ import LakeXplorerPage from "../projectpages/LakeXplorerPage";
 import ProjectsPage from "../pages/ProjectsPage";
 import ToDoListPage from "../projectpages/ToDoList";
 import TicTacToePage from '../projectpages/TicTacToePage';
+import NRrugePage from '../projectpages/nRrugePage';
 
 export {
     AboutMePage,
@@ -17,5 +18,6 @@ export {
     LakeXplorerPage,
     ProjectsPage,
     ToDoListPage,
-    TicTacToePage
+    TicTacToePage,
+    NRrugePage
 };

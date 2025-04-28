@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const navListMenuItems = [
+  { title: "n'Rrugë", href: "/projects/nrruge" },
   { title: "To-Do-List", href: "/projects/todolist" },
   { title: "LakeXplorer", href: "/projects/lakexplorer" },
   { title: "GwenStem", href: "/projects/gwenstem" },

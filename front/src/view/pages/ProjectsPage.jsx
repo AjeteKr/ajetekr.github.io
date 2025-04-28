@@ -23,6 +23,7 @@ const projects = [
       image: NrrugeImage,
       technologies: ["React", "JavaScript", "Next.js", ".NET", "SQL Server"],
       category: "Full Stack",
+      githubLink: "/projects/nrruge",
       liveLink: "https://www.nrruge.com/"
     },
     {
